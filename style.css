@@ -1,0 +1,96 @@
+body {
+    background-color: #2e2e2e;
+    color:  #e2e2e2;
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Ensure no scrollbars appear */
+}
+.frst-prt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Adjust width to fit within the screen */
+    max-width: 400px; /* Optional: Set a max-width */
+    padding: 10px; /* Optional: Add padding for better appearance */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    text-align: center; /* Center text */
+    font-family: "Schoolbell", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+}
+.frst-prt button {
+    width: 100px;
+    height: 100px;
+    background-image: url('img/heart-bttn.png');
+    background-size: cover;
+    border: none;
+    background-color: transparent; /* Remove the button background */
+    position: relative;
+    animation: beat 1s infinite;
+}
+
+.frst-prt button::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-image: url('img/small-heart.png');
+    background-size: cover;
+    animation: flare 1s infinite;
+    opacity: 0;
+}
+
+@keyframes beat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes flare {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+}
+
+/* 
+button:hover {
+        background-color: #ff149d;
+} */
+
+@media (max-width: 600px) {
+    .frst-prt, .prtrt {
+        width: 100%; /* Make it full width on small screens */
+        padding: 20px; /* Adjust padding for small screens */
+    }
+}
+
+/* Portrait */
+.prtrt {
+    line-height: 14px;
+    background: url("https://i.pinimg.com/736x/2a/d2/bb/2ad2bb7721bb5f276fb2e716acd17ed5.jpg");
+    
+    -webkit-background-clip: text;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    background-size: 80vh;
+    background-position: center;
+}
