@@ -75,10 +75,43 @@ button:hover {
         background-color: #ff149d;
 } */
 
-@media (max-width: 600px) {
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
     .frst-prt, .prtrt {
-        width: 100%; /* Make it full width on small screens */
-        padding: 20px; /* Adjust padding for small screens */
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .frst-prt, .prtrt {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .frst-prt, .prtrt {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .frst-prt, .prtrt {
+        width: 80%;
+        padding: 25px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .frst-prt, .prtrt {
+        width: 70%;
+        padding: 30px;
     }
 }
 
